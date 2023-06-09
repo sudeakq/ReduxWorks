@@ -1,6 +1,7 @@
-const Sude = () => {
+const Sude = ({ sudeprop }) => {
+    console.log('1', sudeprop);
     return (
-        <div>sude</div>
+        <div>{sudeprop}</div>
     )
 }
 export default Sude
