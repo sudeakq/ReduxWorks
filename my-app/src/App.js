@@ -1,26 +1,24 @@
 import Sude from "./components/Sude";
 import Deneme from "./components/Deneme";
+import { useState } from "react";
+
 function App() {
-  const deneme="props mantigi";
-  const arr= [
-    {name:'array1',id:0},
-    {name:'array2',id:1},
-    {name:'array3',id:2},
-  ]
-  const clickFunction = () => {
-    console.log("sen butona tıkladın")
-  }
-  return (
-    <div className="App">
-      {/* component mantigi */}
-     <Sude sudeprop={deneme}/>
-     <Deneme/>
+  const [status,setStatus]= useState(false)
 
-     {arr.map((ar, i)=>(<div key={i}>{ar.name}</div>))}
-
-     <button onClick={clickFunction}>tıkla</button>
+ if (status){
+  return(
+    <div>statu durumu true</div>
+  )
+ }
+ 
+ else{
+  return(
+    <div>statu durumu false
+      <button onClick={()=> setStatus(!status)}>tıkla</button>
     </div>
-  );
+    
+  )
+ }
 }
 
 export default App;
