@@ -1,22 +1,26 @@
 import Sude from "./components/Sude";
 import Deneme from "./components/Deneme";
-import { useEffect, useRef, useState } from "react";
+import {  useMemo,useState } from "react";
 
 function App() {
-  const [status,setStatus]= useState("deneme")
-  const firstRef = useRef(0);
+  const [count,setCount]= useState(0)
+  const [text,setText]= useState("")
+ 
 
-  useEffect(()=>{
-    setStatus("deneme2")
-  },[])
-  console.log("firstRef",firstRef.current.value = 5)
-  const reffunc = () => {
-    // firstRef.current
+  const func =(num)=>{
+    console.log("hesaplanıyor....")
+    for (let i = 0; i < 1000000; i++) {
+      num+=1
+    }
+    return num
   }
+const memo = useMemo (()=>func(count),[count])
+
+  
  return(
   <>
-  <div>{status}</div>
-  <input onClick={reffunc} ref={firstRef} placeholder="ara"/>
+{memo}
+  <input value={text} onChange={e => setText(e.target.value)} placeholder="ara"/>
   </>
  )
 
