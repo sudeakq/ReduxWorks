@@ -1,26 +1,35 @@
-import Sude from "./components/Sude";
-import Deneme from "./components/Deneme";
-import {  useMemo,useState } from "react";
 
 function App() {
-  const [count,setCount]= useState(0)
-  const [text,setText]= useState("")
- 
-
-  const func =(num)=>{
-    console.log("hesaplanıyor....")
-    for (let i = 0; i < 1000000; i++) {
-      num+=1
-    }
-    return num
-  }
-const memo = useMemo (()=>func(count),[count])
-
-  
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
  return(
   <>
-{memo}
-  <input value={text} onChange={e => setText(e.target.value)} placeholder="ara"/>
+  <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+ 
   </>
  )
 
