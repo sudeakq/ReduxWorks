@@ -7,25 +7,13 @@ Babel ve Webpack gibi modern araçlarla yapılandırılmış geliştirme ortamı
 React Router ile yönlendirme desteği.
 Stil uygulamaları için CSS dosyalarını destekleyen modüler CSS yaklaşımı.
 Örnek bileşenler ve sayfalar içeren demo uygulaması.
-Kurulum
-Projeyi yerel makinenize klonlayın:
-
-bash
-Copy code
+## Kurulum
+### Projeyi yerel makinenize klonlayın:
 git clone https://github.com/sudeakq/ReactWorks.git
-Proje dizinine gidin:
-
-bash
-Copy code
-cd ReactWorks
-Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın:
-
-bash
-Copy code
+### Proje dizinine gidin:
+cd my-app
+### Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın:
 npm install
-Geliştirme sunucusunu başlatmak için aşağıdaki komutu çalıştırın:
-
-bash
-Copy code
+### Geliştirme sunucusunu başlatmak için aşağıdaki komutu çalıştırın:
 npm start
 Bu komut, uygulamayı http://localhost:3000 adresinde başlatacaktır. Tarayıcınızı açın ve bu adresi ziyaret ederek uygulamayı görüntüleyebilirsiniz.
