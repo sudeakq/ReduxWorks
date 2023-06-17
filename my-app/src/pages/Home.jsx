@@ -1,8 +1,11 @@
 import React from "react"
 const Home = () => {
+    const redirectFunc = () => {
+        window.location = "/detail"
+    }
     return (
         <div>
-            Home
+            <button onClick={redirectFunc}>Yönlendir</button>
         </div>
     )
 }
