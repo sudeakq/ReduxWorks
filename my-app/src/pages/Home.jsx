@@ -1,12 +1,9 @@
-import React from "react"
-const Home = () => {
-    const redirectFunc = () => {
-        window.location = "/detail"
+import React, { Component } from 'react'
+
+export default class home extends Component {
+    render() {
+        return (
+            <div>home</div>
+        )
     }
-    return (
-        <div>
-            <button onClick={redirectFunc}>Yönlendir</button>
-        </div>
-    )
 }
-export default Home
