@@ -1,33 +1,26 @@
 import {useState} from 'react';
+import axios from "axios";
 
-function App() {
-    const [text,setText]=useState("")
-    const [message,setMessage]=useState()
-    console.log(text,"text")
-
-    const onChangeFunc = (e) =>{
-        setText{e.target.value}
-    }
-
-    const messageFunc=()=>{
-        setMessage{prev=>[...prev,text]}
-        setText('')
-    }
-    console.log(message,"message")
-  
- return(
-  <>
-  <input value={text} onChange={onChangeFunc} type="text" placeholder="ekle"/>
-  <button onClick={messageFunc}>ekle</button>
-  {
-    message?.map((msg,i) =>(
-        <div key={i}{msg}></div>
-    ))
+function App(){
+    const [country,setCountry] = useState([])
+    useEffect(() => {
+     const getcountry = async() =>{
+        const data = await axios.get('https://restcountries.com/v3.1/all')
+        setCountry(data)
+     }
+     getcountry()
+    }, [])
+    console.log(country,"country")
     
-  }
-  </>
- )
+ return(
+ <>
+{country?.data?.map((dt,i)=>(
+    <div key={id}>
+{dt.name.common}
+    </div>
+))}
+ </>
 
-}
+ )}
 
 export default App;
