@@ -1,9 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react';
+import arr from '../data';
 
-export default class home extends Component {
-    render() {
-        return (
-            <div>home</div>
-        )
-    }
+
+const Home = () => {
+
+    const redirectFunc = (id) => {
+        window.location = '/detail/${id}'
+    },
+    return {
+        < div >
+    {
+        arr.map(ar, i) => {
+    < div onClick={() => redirectFunc(ar.id)}>
+        {ar.name}
+    </div>
 }
+</div >
+
+}
+export default home
+
