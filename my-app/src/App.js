@@ -6,6 +6,7 @@ console.log("obje",useSelector(state=>state))
     
  return(
  <>
+ sude
 </>
 
  )}
