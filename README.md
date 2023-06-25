@@ -1,5 +1,5 @@
 # ReactWorks
-Bu depo, ReactWorks adlı bir proje içermektedir. ReactWorks, React.js kullanarak oluşturulan ve web uygulamaları geliştirmek için temel bir başlangıç noktası sağlayan bir proje şablonudur.
+Bu depo, React çalışmalarımı içeren bir projeyi kapsamaktadır. ReactWorks, React.js kullanarak oluşturulan ve web uygulamaları geliştirmek için temel bir başlangıç noktası sağlayan bir proje şablonudur.
 
 Özellikler
 React.js ile oluşturulmuş temiz ve düzenli bir proje yapısı.
