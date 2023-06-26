@@ -1,19 +1,19 @@
 # ReactWorks
-Bu depo, React çalışmalarımı içeren bir projeyi kapsamaktadır. ReactWorks, React.js kullanarak oluşturulan ve web uygulamaları geliştirmek için temel bir başlangıç noktası sağlayan bir proje şablonudur.
+This repository covers a project that includes my ReactWorks. ReactWorks is a project template created using React.js and provides a basic starting point for developing web applications.
 
-Özellikler
-React.js ile oluşturulmuş temiz ve düzenli bir proje yapısı.
-Babel ve Webpack gibi modern araçlarla yapılandırılmış geliştirme ortamı.
-React Router ile yönlendirme desteği.
-Stil uygulamaları için CSS dosyalarını destekleyen modüler CSS yaklaşımı.
-Örnek bileşenler ve sayfalar içeren demo uygulaması.
-## Kurulum
-### Projeyi yerel makinenize klonlayın:
+Features
+A clean and organised project structure built with React.js.
+Development environment structured with modern tools such as Babel and Webpack.
+Routing support with React Router.
+Modular CSS approach that supports CSS files for style applications.
+Demo application with sample components and pages.
+## Installation
+### Clone the project to your local machine:
 git clone https://github.com/sudeakq/ReactWorks.git
-### Proje dizinine gidin:
+### Go to the project directory:
 cd my-app
-### Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın:
+### Run the following command to install the required dependencies:
 npm install
-### Geliştirme sunucusunu başlatmak için aşağıdaki komutu çalıştırın:
+### Run the following command to start the development server:
 npm start
-Bu komut, uygulamayı http://localhost:3000 adresinde başlatacaktır. Tarayıcınızı açın ve bu adresi ziyaret ederek uygulamayı görüntüleyebilirsiniz.
+This command will launch the application at http://localhost:3000. Open your browser and visit this address to view the application.
