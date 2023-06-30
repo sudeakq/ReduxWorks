@@ -1,24 +1,29 @@
 
+import { useDispatch } from 'react-redux';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { decrement, increment } from './redux/features/counter/counterSlice';
+import { initializeUseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
+import countrySlice, { getCountry } from './redux/country/countrySlice';
 
 function App() {
-  const [counter,setCounter] = useState(0);
- 
-    const decrement = ()=> {
-      setCounter(counter-1)
-    }
-    const increment = ()=> {
-      setCounter(counter+1)
-    }
+const dispatch = useDispatch();
 
+
+const {counter}= useSelector(state =>state.counter)
+const {country}= useSelector(state =>state.country)
+ 
+console.log(country);
+useEffect(() => {
+  dispatch(getCountry());
+}, []);
 
 
   return (
     <div className="App">
-      <span onClick={decrement}>-</span>
+      <span onClick={()=>dispatch(decrement())}>-</span>
       <span>{counter}</span>
-      <span onClick={increment}>+</span>
+      <span onClick={()=>dispatch(increment())}>+</span>
     </div>
   );
 }
